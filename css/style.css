@@ -1470,7 +1470,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a:hover {
-  color: var(--primary-500);
+  color: #1598f5;
   text-decoration: none;
 }
 
@@ -1650,7 +1650,7 @@ a:hover {
   position: relative;
 }
 .desktop-nav a:hover {
-  color: var(--primary-500);
+  color: #1598f5;
 }
 
 /* Mobile navigation controls */
@@ -2083,7 +2083,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: var(--spacing-8);
-  border: 1px solid var(--primary-800);
+  border: 1px solid #1598f5;
   border-radius: var(--radius-16);
   padding: var(--spacing-8) var(--spacing-12);
   color: var(--body-white);
@@ -2532,7 +2532,7 @@ a:hover {
 }
 
 .faq-item {
-  border: 1px solid var(--stroke);
+  border: 1px solid #1598f5;
   border-radius: var(--radius-24);
   overflow: hidden;
   background-color: var(--main-bg);
@@ -2547,7 +2547,7 @@ a:hover {
 .faq-toggle:checked + .faq-item {
   border: none;
   position: relative;
-  background-color: var(--primary-900);
+  background-color: #00102b;
 }
 
 .faq-question {
@@ -2826,7 +2826,7 @@ a:hover {
 .contact-wrapper {
   padding: var(--spacing-64);
   border-radius: var(--radius-24);
-  border: 1px solid var(--stroke);
+  border: 1px solid #1598f5;
 }
 
 /* ==========================================
@@ -2891,7 +2891,7 @@ a:hover {
 }
 
 .footer-nav a:hover {
-  color: var(--primary-500);
+  color: #1598f5;
 }
 
 /* Footer Info Columns */
@@ -3096,7 +3096,7 @@ a:hover {
   gap: var(--spacing-2);
   padding: var(--spacing-20);
   border-radius: var(--radius-16);
-  background: var(--primary-button-default);
+  background: #b2cde3;
   color: var(--primary-button-text);
   font-size: var(--label-medium-size);
   font-weight: var(--label-medium-weight);
@@ -3117,7 +3117,7 @@ a:hover {
 }
 .button-primary:hover {
   opacity: 0.9;
-  background: var(--primary-button-hover);
+  background: #1598f5;
   color: var(--primary-button-text);
 }
 .button-primary:active {
@@ -3316,7 +3316,7 @@ a:hover {
 }
 .input-field:focus {
   outline: none;
-  border-color: var(--primary-500);
+  border-color: #3073ff;
   box-shadow: 0 0 0 2px rgba(118, 104, 252, 0.2);
 }
 .input-field:disabled {
@@ -3368,7 +3368,7 @@ textarea.input-field {
   position: fixed;
   bottom: var(--spacing-32);
   right: var(--spacing-32);
-  background: var(--primary-900);
+  background: #00092b;
   color: var(--body-white);
   border: none;
   border-radius: var(--radius-full);
@@ -3397,7 +3397,7 @@ textarea.input-field {
   visibility: visible;
 }
 .scroll-to-top:hover {
-  background: var(--primary-800);
+  background: #1598f5;
   transform: translateY(-2px);
   color: var(--body-white);
 }
@@ -3657,7 +3657,7 @@ textarea.input-field {
   border-radius: var(--radius-24);
   margin-bottom: var(--spacing-16);
   position: relative;
-  border: 1px solid var(--stroke);
+  border: 1px solid #1598f5;
 }
 .review-item--v2 .review-avatar {
   flex-shrink: 0;
@@ -3931,7 +3931,7 @@ textarea.input-field {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-4);
-  background-color: var(--badge-bg, var(--primary-500));
+  background-color: #100e44;
   color: var(--badge-text, var(--primary-100));
   font-size: var(--label-small-size);
   font-weight: var(--label-small-weight);
@@ -4368,9 +4368,6 @@ textarea.input-field {
 
 /* Specific styles for card-fr-2-vp (formerly card-vertical-premium-v1) */
 .casino-card--fr-2-vp {
-  /* Inherits base .casino-card styles */
-  /* Styles from original _casino-cards-vertical-premium-v1.scss, adapted and scoped */
-  /* Original file used .casino-card-vertical-premium-v1 as the main class */
   flex-direction: column;
   text-align: center;
   border-radius: var(--radius-24);
@@ -4378,13 +4375,18 @@ textarea.input-field {
   gap: var(--spacing-16);
   overflow: visible !important;
   position: relative;
-  border: 2px solid var(--card-stroke);
+  border: 2px solid #b2cde3;
   padding: var(--spacing-20);
-  /* Hover effects */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
+
+/* Hover: бордер і фон */
 .casino-card--fr-2-vp:hover {
-  border-color: var(--primary-500);
+  border-color: #1598f5;
+  background-color: var(--bg-default);
 }
+
+/* Обгортка контенту */
 .casino-card--fr-2-vp .casino-card__content-wrapper {
   position: relative;
   z-index: 1;
@@ -4395,15 +4397,15 @@ textarea.input-field {
   display: flex;
   flex-direction: column;
 }
-.casino-card--fr-2-vp:hover {
-  background-color: var(--bg-default);
-  border-color: var(--primary-500);
-}
-.casino-card--fr-2-vp > .casino-card__content {
+
+/* Контент — без відступів */
+.casino-card--fr-2-vp>.casino-card__content {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
   padding: 0 !important;
 }
+
+/* Бедж */
 .casino-card--fr-2-vp .casino-card__badge {
   white-space: nowrap;
   position: absolute;
@@ -4417,21 +4419,21 @@ textarea.input-field {
   width: auto;
   color: var(--primary-100);
 }
+
+/* Ранг */
 .casino-card--fr-2-vp .casino-card__rank {
   position: absolute;
-  top: var(--spacing-20);
-  left: var(--spacing-20);
+  top: 0;
+  left: 0;
   width: var(--size-32);
   height: var(--size-32);
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-8);
-  background: var(--primary-900);
+  background: #100e44;
   color: var(--body-main);
   font-weight: 700;
   font-size: var(--body-medium-size);
   z-index: 2;
-  left: 0;
-  top: 0;
   margin-right: 0;
 }
 @media (max-width: 768px) {
