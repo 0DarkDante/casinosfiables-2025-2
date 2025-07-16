@@ -3093,39 +3093,60 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-2);
-  padding: var(--spacing-20);
-  border-radius: var(--radius-16);
-  background: #b2cde3;
-  color: var(--primary-button-text);
-  font-size: var(--label-medium-size);
-  font-weight: var(--label-medium-weight);
-  line-height: var(--label-medium-line-height);
-  font-family: var(--label-medium-family);
-  letter-spacing: var(--label-medium-letter-spacing);
+  gap: 8px;
+  /* вместо var(--spacing-2), для понятности */
+  padding: 14px 28px;
+  /* чуть меньше, чтобы не громоздко */
+  border-radius: 32px;
+  /* более мягкий, «пилл» стиль */
+  background: linear-gradient(135deg, #1598f5 0%, #4da9ff 100%);
+  /* градиент от твоего синего к светлому */
+  color: #fff;
+  font-size: 1rem;
+  /* под var(--label-medium-size) */
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease;
   text-decoration: none;
-  width: 100%; /* Change to full width */
+  width: 100%;
   max-width: 320px;
-  /* Make buttons full width on mobile devices */
+  box-shadow: 0 4px 15px rgba(21, 152, 245, 0.5);
+  user-select: none;
+  /* Чтобы курсор по-человечески мигал */
+  outline-offset: 2px;
+  outline-color: transparent;
 }
-.button-primary path {
-  fill: var(--primary-button-text) !important;
-}
+
 .button-primary:hover {
-  opacity: 0.9;
-  background: #1598f5;
-  color: var(--primary-button-text);
+  background: linear-gradient(135deg, #4da9ff 0%, #1598f5 100%);
+  box-shadow: 0 6px 20px rgba(21, 152, 245, 0.8);
+  transform: translateY(-2px);
 }
+
 .button-primary:active {
-  opacity: 0.8;
+  background: linear-gradient(135deg, #0d75c1 0%, #1a85e0 100%);
+  box-shadow: 0 2px 8px rgba(21, 152, 245, 0.9);
+  transform: translateY(0);
 }
+
 .button-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  box-shadow: none;
+  background: #a0b8d7;
+  color: #d3dce6;
+}
+
+.button-primary path {
+  fill: #fff !important;
 }
 .button-primary .button-icon {
   display: inline-flex;
@@ -3793,6 +3814,9 @@ textarea.input-field {
   display: grid;
   gap: 1.5rem;
   width: 100%;
+
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 колонки равной ширины */
 }
 
 /* Dynamic grid columns based on cards count */
@@ -3806,10 +3830,6 @@ textarea.input-field {
 
 .casino-cards-row[data-cards="3"] {
   grid-template-columns: 1fr 1fr 1fr;
-}
-
-.casino-cards-row[data-cards="4"] {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .casino-cards-row[data-cards="5"] {
@@ -6713,182 +6733,93 @@ textarea.input-field {
             }
         }
 
+.affiliate-info,
+.about-platform,
+.privacy-policy,
+.terms-conditions,
+.responsible-gaming {
+  max-width: 800px;
+  margin: 50px auto 50px auto;
+  padding: 40px 40px 40px 40px;
+  background-color: #1c2333;
+  /* насыщенный темно-синий фон */
+  border: 2px solid #11427e;
+  /* глубокий синий бордер */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(17, 66, 126, 0.7);
+  /* синий оттенок тени */
+  color: #F5F5F5;
+  /* белый текст */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  animation: fadeInUp 0.7s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
 
 .affiliate-info {
   max-width: 700px;
-  margin: 60px auto 0 auto;
   padding: 40px;
-  background-color: #1c1800; /* Темний фон (майже чорний) */
-  border: 2px solid #680202; /* Малиново-червона рамка */
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  color: #f5f5f5; /* Білий текст */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
 }
-
-.affiliate-info h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #FF8F00; /* Бурштиновий заголовок */
-}
-
-.affiliate-info p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e0e0e0;
-  margin-bottom: 30px;
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.affiliate-info button {
-  padding: 12px 28px;
-  font-size: 1rem;
-  background-color: #680202; /* Насичений малиновий */
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.affiliate-info button:hover {
-  background-color: #8b0000; /* Темніший малиновий при наведенні */
-  transform: translateY(-2px);
-}
-
 
 .about-platform {
   max-width: 700px;
-  margin: 50px auto 0 auto;
   padding: 30px 40px;
-  background-color: #1c1800;
-  border: 2px solid #680202;
   border-radius: 18px;
-  color: #f5f5f5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
 }
 
-.about-platform h2 {
+.affiliate-info h1,
+.about-platform h2,
+.privacy-policy h1,
+.privacy-policy h2,
+.terms-conditions h1,
+.terms-conditions h2,
+.responsible-gaming h1,
+.responsible-gaming h2 {
+  color: #1598f5;
+  /* твой яркий синий */
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
   font-size: 2rem;
-  margin-bottom: 20px;
-  color: #FF8F00;
-}
-
-.about-platform p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 18px;
-  color: #e0e0e0;
-}
-
-.privacy-policy {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 40px;
-  background-color: #1c1800;
-  border: 2px solid #680202;
-  border-radius: 20px;
-  color: #f5f5f5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-}
-
-.privacy-policy h1 {
-  color: #FF8F00;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.privacy-policy h2 {
-  color: #FF8F00;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-.privacy-policy p,
-.privacy-policy ul {
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-.privacy-policy ul {
-  padding-left: 20px;
-}
-
-.privacy-policy a {
-  color: #FF8F00;
-  text-decoration: underline;
-}
-
-.terms-conditions {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 40px;
-  background-color: #1c1800;
-  border: 2px solid #680202;
-  border-radius: 20px;
-  color: #f5f5f5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-}
-
-.terms-conditions h1 {
-  color: #FF8F00;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.terms-conditions h2 {
-  color: #FF8F00;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-.terms-conditions p {
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-.responsible-gaming {
-  max-width: 800px;
-  margin: 50px auto 0 auto;
-  padding: 40px;
-  background-color: #1c1800;
-  border: 2px solid #680202;
-  border-radius: 20px;
-  color: #f5f5f5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
 }
 
 .responsible-gaming h1 {
-  color: #FF8F00;
   font-size: 2.3rem;
-  margin-bottom: 20px;
-  text-align: center;
+}
+
+.privacy-policy h1,
+.terms-conditions h1 {
+  font-size: 2.5rem;
+}
+
+.privacy-policy h2,
+.terms-conditions h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
 .responsible-gaming h2 {
-  color: #FF8F00;
+  font-size: 1.6rem;
   margin-top: 30px;
   margin-bottom: 12px;
-  font-size: 1.6rem;
 }
 
-.responsible-gaming p {
-  margin-bottom: 15px;
+.affiliate-info p,
+.about-platform p,
+.privacy-policy p,
+.privacy-policy ul,
+.terms-conditions p,
+.responsible-gaming p,
+.responsible-gaming ul,
+.responsible-gaming ul li {
   font-size: 1rem;
-  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #c7d9ff;
+  /* светло-синий, мягкий для текста */
 }
 
 .responsible-gaming ul {
@@ -6899,10 +6830,47 @@ textarea.input-field {
 
 .responsible-gaming ul li {
   margin-bottom: 8px;
-  font-size: 1rem;
 }
 
+.privacy-policy ul {
+  padding-left: 20px;
+}
+
+.privacy-policy a,
 .responsible-gaming a {
-  color: #FF8F00;
+  color: #1598f5;
   text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.privacy-policy a:hover,
+.responsible-gaming a:hover {
+  color: #4da9ff;
+  /* светлый синий для hover */
+}
+
+.affiliate-info button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  background-color: #11427e;
+  /* насыщенный темно-синий */
+  color: #F5F5F5;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.affiliate-info button:hover {
+  background-color: #0d3670;
+  /* темнее синий на hover */
+  transform: translateY(-2px);
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
