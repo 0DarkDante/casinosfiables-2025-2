@@ -6686,3 +6686,197 @@ textarea.input-field {
                 justify-content: center;
             }
         }
+
+
+.affiliate-info {
+  max-width: 700px;
+  margin: 60px auto 0 auto;
+  padding: 40px;
+  background-color: #1c1800; /* Темний фон (майже чорний) */
+  border: 2px solid #680202; /* Малиново-червона рамка */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  color: #f5f5f5; /* Білий текст */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.affiliate-info h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FF8F00; /* Бурштиновий заголовок */
+}
+
+.affiliate-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.affiliate-info button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  background-color: #680202; /* Насичений малиновий */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.affiliate-info button:hover {
+  background-color: #8b0000; /* Темніший малиновий при наведенні */
+  transform: translateY(-2px);
+}
+
+
+.about-platform {
+  max-width: 700px;
+  margin: 50px auto 0 auto;
+  padding: 30px 40px;
+  background-color: #1c1800;
+  border: 2px solid #680202;
+  border-radius: 18px;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.about-platform h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FF8F00;
+}
+
+.about-platform p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #e0e0e0;
+}
+
+.privacy-policy {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #1c1800;
+  border: 2px solid #680202;
+  border-radius: 20px;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.privacy-policy h1 {
+  color: #FF8F00;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.privacy-policy h2 {
+  color: #FF8F00;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.privacy-policy p,
+.privacy-policy ul {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.privacy-policy ul {
+  padding-left: 20px;
+}
+
+.privacy-policy a {
+  color: #FF8F00;
+  text-decoration: underline;
+}
+
+.terms-conditions {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #1c1800;
+  border: 2px solid #680202;
+  border-radius: 20px;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.terms-conditions h1 {
+  color: #FF8F00;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.terms-conditions h2 {
+  color: #FF8F00;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.terms-conditions p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.responsible-gaming {
+  max-width: 800px;
+  margin: 50px auto 0 auto;
+  padding: 40px;
+  background-color: #1c1800;
+  border: 2px solid #680202;
+  border-radius: 20px;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.responsible-gaming h1 {
+  color: #FF8F00;
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.responsible-gaming h2 {
+  color: #FF8F00;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+}
+
+.responsible-gaming p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.responsible-gaming ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.responsible-gaming ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.responsible-gaming a {
+  color: #FF8F00;
+  text-decoration: underline;
+}
